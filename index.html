@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	<script type="text/javascript">
@@ -77,19 +78,17 @@ $( document ).ready(function() {
     	})
 	});
 */
-
-
-
-
 </script>
 <style type="text/css">
 
 	#dialog{
 		background-color: #c1c1c1;
-		width: 300px;
-		height: 150px;
+		width: 800px;
+		height: 570px;
 		position: absolute;
 		border:5px solid gray;
+        top: 200px;
+        left: 50%;
 	}
 	#wrapper:hover{
 		cursor:default;
@@ -101,17 +100,17 @@ $( document ).ready(function() {
 
 	}
 	#bar #close-dialog{
-		float:right;
+		float: right;
 		background-color: #b13939;
-		position:absolute;
-		top:-5px;
-		left:86%;
-		width:40px;
-		text-align:center;
+		position: absolute;
+		top: -5px;
+		left: 95%;
+		width: 40px;
+		text-align: center;
 		color:white;
 		font-family: Arial, Helvetica, sans-serif;
 		transition: background-color 0.2s;
-		cursor:default;
+		cursor: default;
 	}
 	#bar #close-dialog:hover{
 		background-color: #e60000;
@@ -120,7 +119,7 @@ $( document ).ready(function() {
 	#content{
 		background-color: white;
 		width: 100%;
-		height: 80px;
+		height: 440px;
 	}
 	#buttons{
 		background-color:white;
@@ -128,7 +127,23 @@ $( document ).ready(function() {
 		height: 40px;
 		
 	}
-
+    
+    nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+    
+    nav li {
+        display: inline;
+        border: solid;
+        border-width: 1px 1px 0 1px;
+        margin: 0 5px 0 0;
+    }
+    
+    #content {
+    border: 1px solid;
+}
 
 </style>
 <title></title>
@@ -140,8 +155,25 @@ $( document ).ready(function() {
 			<div id="bar">
 				<div id="close-dialog">x</div>
 			</div>
-			<div id="content"></div>
-			<div id="buttons"></div>
+			<div id="content">        
+                <ul class="tabs">
+    <li>
+        <input type="radio" name="tabs" id="tab1" checked />
+        <label for="tab1">Description</label>
+        <div id="tab-content1" class="tab-content">
+          <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        </div>
+    </li>
+  
+    <li>
+        <input type="radio" name="tabs" id="tab2" />
+        <label for="tab2">Specification</label>
+        <div id="tab-content2" class="tab-content">
+          <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, est, ima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla?</p>
+        </div>
+    </li>
+</ul>           
+            </div>
 		</div>
 	</div>
 
